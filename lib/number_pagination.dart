@@ -168,23 +168,23 @@ class _NumberPaginationState extends State<NumberPagination> {
                 highlightColor: Colors.transparent,
                 onTap: () => _changePage(index + 1 + rangeStart),
                 child: Container(
-                  margin: const EdgeInsets.all(4),
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: (currentPage - 1) % widget.threshold == index
-                        ? widget.colorPrimary
-                        : widget.colorSub,
-                    // borderRadius: BorderRadius.all(Radius.circular(4)),
-                    // boxShadow: [
-                    //   BoxShadow(
-                    //     color: Colors.grey,
-                    //     offset: Offset(0.0, 1.0), //(x,y)
-                    //     blurRadius: 6.0,
-                    //   ),
-                    // ],
-                  ),
+                  // margin: const EdgeInsets.all(4),
+                  // padding:
+                  //     const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
+                  // decoration: BoxDecoration(
+                  //   shape: BoxShape.circle,
+                  //   color: (currentPage - 1) % widget.threshold == index
+                  //       ? widget.colorPrimary
+                  //       : widget.colorSub,
+                  // borderRadius: BorderRadius.all(Radius.circular(4)),
+                  // boxShadow: [
+                  //   BoxShadow(
+                  //     color: Colors.grey,
+                  //     offset: Offset(0.0, 1.0), //(x,y)
+                  //     blurRadius: 6.0,
+                  //   ),
+                  // ],
+                  // ),
                   child: Text(
                     '${index + 1 + rangeStart}',
                     style: TextStyle(
