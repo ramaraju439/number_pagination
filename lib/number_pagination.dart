@@ -12,10 +12,10 @@ class NumberPagination extends StatefulWidget {
     this.colorPrimary = Colors.black,
     this.colorSub = Colors.white,
     this.controlButton,
-    this.iconToFirst,
+    // this.iconToFirst,
     this.iconPrevious,
     this.iconNext,
-    this.iconToLast,
+    // this.iconToLast,
     this.fontSize = 15,
     this.fontFamily,
   });
@@ -42,7 +42,7 @@ class NumberPagination extends StatefulWidget {
   final Widget? controlButton;
 
   ///The icon of button to first.
-  final Widget? iconToFirst;
+  // final Widget? iconToFirst;
 
   ///The icon of button to previous.
   final Widget? iconPrevious;
@@ -51,7 +51,7 @@ class NumberPagination extends StatefulWidget {
   final Widget? iconNext;
 
   ///The icon of button to last.
-  final Widget? iconToLast;
+  // final Widget? iconToLast;
 
   ///The size of numbers.
   final double fontSize;
@@ -75,10 +75,10 @@ class _NumberPaginationState extends State<NumberPagination> {
   @override
   void initState() {
     this.currentPage = widget.pageInit;
-    this.iconToFirst = widget.iconToFirst ?? Icon(Icons.first_page);
+    // this.iconToFirst = widget.iconToFirst ?? Icon(Icons.first_page);
     this.iconPrevious = widget.iconPrevious ?? Icon(Icons.keyboard_arrow_left);
     this.iconNext = widget.iconNext ?? Icon(Icons.keyboard_arrow_right);
-    this.iconToLast = widget.iconToLast ?? Icon(Icons.last_page);
+    // this.iconToLast = widget.iconToLast ?? Icon(Icons.last_page);
 
     _rangeSet();
 
