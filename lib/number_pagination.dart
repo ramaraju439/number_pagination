@@ -128,18 +128,18 @@ class _NumberPaginationState extends State<NumberPagination> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          InkWell(
-            onTap: () => _changePage(0),
-            child: Stack(
-              children: [
-                if (widget.controlButton != null) ...[
-                  widget.controlButton!,
-                  iconToFirst
-                ] else
-                  _defaultControlButton(iconToFirst),
-              ],
-            ),
-          ),
+          // InkWell(
+          //   onTap: () => _changePage(0),
+          //   child: Stack(
+          //     children: [
+          //       if (widget.controlButton != null) ...[
+          //         widget.controlButton!,
+          //         iconToFirst
+          //       ] else
+          //         _defaultControlButton(iconToFirst),
+          //     ],
+          //   ),
+          // ),
           SizedBox(
             width: 4,
           ),
@@ -172,17 +172,18 @@ class _NumberPaginationState extends State<NumberPagination> {
                   padding:
                       const EdgeInsets.symmetric(vertical: 4, horizontal: 8),
                   decoration: BoxDecoration(
+                    shape: BoxShape.circle,
                     color: (currentPage - 1) % widget.threshold == index
                         ? widget.colorPrimary
                         : widget.colorSub,
-                    borderRadius: BorderRadius.all(Radius.circular(4)),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        offset: Offset(0.0, 1.0), //(x,y)
-                        blurRadius: 6.0,
-                      ),
-                    ],
+                    // borderRadius: BorderRadius.all(Radius.circular(4)),
+                    // boxShadow: [
+                    //   BoxShadow(
+                    //     color: Colors.grey,
+                    //     offset: Offset(0.0, 1.0), //(x,y)
+                    //     blurRadius: 6.0,
+                    //   ),
+                    // ],
                   ),
                   child: Text(
                     '${index + 1 + rangeStart}',
@@ -216,18 +217,18 @@ class _NumberPaginationState extends State<NumberPagination> {
           SizedBox(
             width: 4,
           ),
-          InkWell(
-            onTap: () => _changePage(widget.pageTotal),
-            child: Stack(
-              children: [
-                if (widget.controlButton != null) ...[
-                  widget.controlButton!,
-                  iconToLast
-                ] else
-                  _defaultControlButton(iconToLast),
-              ],
-            ),
-          ),
+          // InkWell(
+          //   onTap: () => _changePage(widget.pageTotal),
+          //   child: Stack(
+          //     children: [
+          //       if (widget.controlButton != null) ...[
+          //         widget.controlButton!,
+          //         iconToLast
+          //       ] else
+          //         _defaultControlButton(iconToLast),
+          //     ],
+          //   ),
+          // ),
         ],
       ),
     );
